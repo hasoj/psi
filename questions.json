@@ -1,0 +1,283 @@
+{
+  "status": "ok",
+  "groups": [
+    {
+      "text": "Este constituită din 6 aspecte care se referă la dimensiuni specifice, comune tuturor organizaţiilor. Fiecărui aspect îi sunt alocate 4 tipuri de afirmaţii posibile, pe care trebuie să le evaluaţi în funcţie de gradul de potrivire cu organizaţia dumneavoastră. \r\nSarcina dumneavoastră este de a repartiza la fiecare dintre cele 4 chestiuni un total de 100 de puncte, în funcţie de cât de potrivite vi se par organizaţiei unde lucraţi.",
+      "id": 1,
+      "heading": "Partea A",
+      "questions": [
+        {
+          "text": "Caracteristici dominante ale organizaţiei",
+          "id": 1,
+          "choices": [
+            {
+              "text": "Organizaţia în care lucrez este un loc personal. Suntem ca într-o familie. Oamenii par să comunice bine şi să împărtăşească multe lucruri despre ei.",
+              "id": 1
+            },
+            {
+              "text": "Organizaţia în care lucrez este un loc foarte dinamic şi întreprinzător. Oamenii sunt dispuşi să se implice în probleme şi să îşi asume riscuri.",
+              "id": 2
+            },
+            {
+              "text": "Organizaţia în care lucrez este orientată foarte mult către rezultate. Una dintre preocupările principale este aceea de a fi eficace în realizarea obiectivelor fixate. Oamenii sunt competitivi şi orientaţi către performanţă.",
+              "id": 3
+            },
+            {
+              "text": "Organizaţia în care lucrez îşi structurează activităţile şi exercită control asupra resurselor. Activitatea oamenilor este ghidată de proceduri formale.",
+              "id": 4
+            }
+          ]
+        },
+        {
+          "text": "Conducerea în cadrul organizaţiei",
+          "id": 2,
+          "choices": [
+            {
+              "text": "Conducerea în organizaţia noastră facilitează desfăşurarea activităţilor, liderii noştri ne ghidează, ne îndrumă, ne ajută să ne îmbunătăţim performanţele.",
+              "id": 5
+            },
+            {
+              "text": "Conducerea în organizaţia noastră este întreprinzătoare, inovatoare, caută soluţii noi şi îşi asumă riscuri.",
+              "id": 6
+            },
+            {
+              "text": "Conducerea în organizaţia noastră este orientată către rezultate, către atingerea obiectivelor, este agresivă, dar clară, raţională, recompensele sunt bine stabilite.",
+              "id": 7
+            },
+            {
+              "text": "Conducerea în organizaţia noastră coordonează, organizează, eficienţa este constantă.",
+              "id": 8
+            }
+          ]
+        },
+        {
+          "text": "Managementul resurselor umane",
+          "id": 3,
+          "choices": [
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul în echipă, pe participare şi consens în cadrul echipelor de lucru.",
+              "id": 9
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul individual, pe inovaţie, asumare de riscuri şi valorizează unicitatea.",
+              "id": 10
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se caracterizează prin standarde înalte de performanţă, stimulează spiritul competitiv.",
+              "id": 11
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe asigurarea siguranţei locului de muncă, caracterizându-se prin conformism, predictibilitate şi stabilitate în relaţiile dintre angajaţi.",
+              "id": 12
+            }
+          ]
+        },
+        {
+          "text": "Liantul organizaţiei",
+          "id": 4,
+          "choices": [
+            {
+              "text": "Factorii care menţin organizaţia unită sunt loialitatea şi încrederea reciprocă. Angajamentul şi ataşamentul faţă de organizaţie este foarte mare.",
+              "id": 13
+            },
+            {
+              "text": "Ceea ce menţine organizaţia unită este focalizarea pe inovaţie şi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe piaţă.",
+              "id": 14
+            },
+            {
+              "text": "Ceea ce menţine organizaţia unită este accentul pus pe performanţe, realizări şi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea şi orientarea către profit.",
+              "id": 15
+            },
+            {
+              "text": "Factorii care menţin organizaţia unită sunt regulile şi politicile formale. Este importantă menţinerea unui progres constant şi sigur.",
+              "id": 16
+            }
+          ]
+        },
+        {
+          "text": "Valorile care stau la baza strategiei organizatorice",
+          "id": 5,
+          "choices": [
+            {
+              "text": "Organizaţia noastră pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi încrederea reciprocă, deschiderea şi implicarea.",
+              "id": 17
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe achiziţionarea de noi resurse şi pe crearea unui mediu provocator şi stimulant. Este valorizată căutarea de noi oportunităţi şi încercarea de alternative noi.",
+              "id": 18
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe realizări şi pe activităţile care stimulează spiritul competitiv. Este important să oferim o gamă largă de produse şi să câştigăm o piaţă cât mai vastă.",
+              "id": 19
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe stabilitate şi siguranţă. Pentru noi sunt importante eficienţa şi controlul exercitat",
+              "id": 20
+            }
+          ]
+        },
+        {
+          "text": "Criteriile de succes",
+          "id": 6,
+          "choices": [
+            {
+              "text": "Succesul organizaţiei noastre este definit prin prisma dezvoltării resurselor umane, a muncii în echipă, a angajamentului angajaţilor faţă de organizaţie şi a orientării către angajaţi.",
+              "id": 21
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma achiziţionării de produse şi resurse noi sau unice. Organizaţia noastră este un lider în domeniul noilor tehnologii şi inovaţii.",
+              "id": 22
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma creşterii profitului şi a cotei de piaţă, dar şi a depăşirii concurenţei. Cheia este preluarea conducerii pe piaţa competitivă.",
+              "id": 23
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma eficienţei, folosirii optime a resurselor. În acest sens sunt critice scăderea costurilor de producţie, planificarea constantă a activităţilor şi respectarea termenelor de livrare.",
+              "id": 24
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "Vă rugăm să vă gândiţi la cum aţi dori dumneavoastră să fie organizaţia în care lucraţi şi să completaţi în continuare grila. \r\nSe respectă aceleaşi principii ca şi la Partea A a chestionarului.",
+      "id": 2,
+      "heading": "Partea B",
+      "questions": [
+        {
+          "text": "Caracteristici dominante ale organizaţiei",
+          "id": 7,
+          "choices": [
+            {
+              "text": "Organizaţia în care lucrez este un loc personal. Suntem ca într-o familie. Oamenii par să comunice bine şi să împărtăşească multe lucruri.",
+              "id": 25
+            },
+            {
+              "text": "Organizaţia în care lucrez este un loc foarte dinamic şi întreprinzător. Oamenii sunt dispuşi să se implice în probleme şi să îşi asume riscuri.",
+              "id": 26
+            },
+            {
+              "text": "Organizaţia în care lucrez este orientată foarte mult către rezultate. Una dintre preocupările principale este aceea de a fi eficace în realizarea obiectivelor fixate. Oamenii sunt competitivi şi orientaţi către performanţă.",
+              "id": 27
+            },
+            {
+              "text": "Organizaţia în care lucrez îşi structurează activităţile şi exercită control asupra resurselor. Activitatea oamenilor este ghidată de proceduri formale.",
+              "id": 28
+            }
+          ]
+        },
+        {
+          "text": "Conducerea în cadrul organizaţiei",
+          "id": 8,
+          "choices": [
+            {
+              "text": "Conducerea în organizaţia noastră facilitează desfăşurarea activităţilor, liderii noştri ne ghidează, ne îndrumă, ne ajută să ne îmbunătăţim performanţele.",
+              "id": 29
+            },
+            {
+              "text": "Conducerea în organizaţia noastră este întreprinzătoare, inovatoare, caută soluţii noi şi îşi asumă riscuri.",
+              "id": 30
+            },
+            {
+              "text": "Conducerea în organizaţia noastră este orientată către rezultate, către atingerea obiectivelor, este agresivă, dar clară, raţională, recompensele sunt bine stabilite.",
+              "id": 31
+            },
+            {
+              "text": "Conducerea în organizaţia noastră coordonează, organizează, eficienţa este constantă.",
+              "id": 32
+            }
+          ]
+        },
+        {
+          "text": "Managementul resurselor umane",
+          "id": 9,
+          "choices": [
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul în echipă, pe participare şi consens în cadrul echipelor de lucru.",
+              "id": 33
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul individual, pe inovaţie, asumare de riscuri şi valorizează unicitatea.",
+              "id": 34
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se caracterizează prin standarde înalte de performanţă, stimulează spiritul competitiv.",
+              "id": 35
+            },
+            {
+              "text": "Stilul de management în organizaţia noastră se focalizează pe asigurarea siguranţei locului de muncă, caracterizându-se prin conformism, predictibilitate şi stabilitate în relaţiile dintre angajaţi.",
+              "id": 36
+            }
+          ]
+        },
+        {
+          "text": "Liantul organizaţiei",
+          "id": 10,
+          "choices": [
+            {
+              "text": "Factorii care menţin organizaţia unită sunt loialitatea şi încrederea reciprocă. Angajamentul şi ataşamentul faţă de organizaţie este foarte mare.",
+              "id": 37
+            },
+            {
+              "text": "Ceea ce menţine organizaţia unită este focalizarea pe inovaţie şi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe piaţă.",
+              "id": 38
+            },
+            {
+              "text": "Ceea ce menţine organizaţia unită este accentul pus pe performanţe, realizări şi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea şi orientarea către profit.",
+              "id": 39
+            },
+            {
+              "text": "Factorii care menţin organizaţia unită sunt regulile şi politicile formale. Este importantă menţinerea unui progres constant şi sigur.",
+              "id": 40
+            }
+          ]
+        },
+        {
+          "text": "Valorile care stau la baza strategiei organizatorice",
+          "id": 11,
+          "choices": [
+            {
+              "text": "Organizaţia noastră pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi încrederea reciprocă, deschiderea şi implicarea.",
+              "id": 41
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe achiziţionarea de noi resurse şi pe crearea unui mediu provocator şi stimulant. Este valorizată căutarea de noi oportunităţi şi încercarea de alternative noi.",
+              "id": 42
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe realizări şi pe activităţile care stimulează spiritul competitiv. Este important să oferim o gamă largă de produse şi să câştigăm o piaţă cât mai vastă.",
+              "id": 43
+            },
+            {
+              "text": "Organizaţia noastră pune accent pe stabilitate şi siguranţă. Pentru noi sunt importante eficienţa, controlul exercitat şi",
+              "id": 44
+            }
+          ]
+        },
+        {
+          "text": "Criteriile de succes",
+          "id": 12,
+          "choices": [
+            {
+              "text": "Succesul organizaţiei noastre este definit prin prisma dezvoltării resurselor umane, a muncii în echipă, a angajamentul angajaţilor faţă de organizaţie şi a orientării către angajaţi.",
+              "id": 45
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma achiziţionării de produse şi resurse noi sau unice. Organizaţia noastră este un lider în domeniul noilor tehnologii şi inovaţii.",
+              "id": 46
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma creşterii profitului şi a cotei de piaţă, dar şi a depăşirii concurenţei. Cheia este luarea conducerii pe piaţa competitivă.",
+              "id": 47
+            },
+            {
+              "text": "Succesul organizaţiei noastre se defineşte prin prisma eficienţei, folosirii optime a resurselor. În acest sens sunt critice scăderea costurilor de producţie, planificarea constantă a activităţilor şi respectarea termenelor de livrare.",
+              "id": 48
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
