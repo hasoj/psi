@@ -7,6 +7,9 @@ class QuestionGroup(models.Model):
     date_added = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return str(self.id) + ". " + self.heading
+
 
 class Question(models.Model):
     text = models.TextField()
@@ -14,12 +17,18 @@ class Question(models.Model):
     date_added = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now_add=True)
 
+    def __str__(self):
+        return str(self.id) + ". " + self.text
+
 
 class Choice(models.Model):
     text = models.TextField()
     question = models.ForeignKey(Question)
     date_added = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return str(self.id) + ". " + self.text
 
 
 class Session(models.Model):
