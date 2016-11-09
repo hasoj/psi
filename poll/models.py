@@ -26,6 +26,7 @@ class Session(models.Model):
     name = models.TextField(blank=True)
     ip = models.CharField(max_length=200)
     date_added = models.DateTimeField(auto_now=True)
+    date_submitted = models.DateTimeField(null=True)
 
 
 class Response(models.Model):
