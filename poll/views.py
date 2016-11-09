@@ -10,7 +10,7 @@ def questions(request):
                 "id": c.id,
                 "text": c.text
             }
-            for c in question.choice_set
+            for c in question.choice_set.all()
         ]
     def _get_questions(group):
         return [
@@ -19,7 +19,7 @@ def questions(request):
                 "text": q.text,
                 "choices": _get_choices(q),
             }
-            for q in group.question_set
+            for q in group.question_set.all()
         ]
     groups = [
         {
