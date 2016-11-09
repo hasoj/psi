@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from poll import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^questions$', views.questions, name='questions'),
+    url(r'^submit$', views.submit, name='submit'),
+    url(r'^statistics$', views.statistics, name='statistics'),
+
 ]
