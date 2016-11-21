@@ -1,283 +1,487 @@
 {
-  "status": "ok",
-  "groups": [
-    {
-      "text": "Este constituită din 6 aspecte care se referă la dimensiuni specifice, comune tuturor organizaţiilor. Fiecărui aspect îi sunt alocate 4 tipuri de afirmaţii posibile, pe care trebuie să le evaluaţi în funcţie de gradul de potrivire cu organizaţia dumneavoastră. \r\nSarcina dumneavoastră este de a repartiza la fiecare dintre cele 4 chestiuni un total de 100 de puncte, în funcţie de cât de potrivite vi se par organizaţiei unde lucraţi.",
-      "id": 1,
-      "heading": "Partea A",
-      "questions": [
+    "status": "ok",
+    "groups": [
         {
-          "text": "Caracteristici dominante ale organizaţiei",
-          "id": 1,
-          "choices": [
-            {
-              "text": "Organizaţia în care lucrez este un loc personal. Suntem ca într-o familie. Oamenii par să comunice bine şi să împărtăşească multe lucruri despre ei.",
-              "id": 1
-            },
-            {
-              "text": "Organizaţia în care lucrez este un loc foarte dinamic şi întreprinzător. Oamenii sunt dispuşi să se implice în probleme şi să îşi asume riscuri.",
-              "id": 2
-            },
-            {
-              "text": "Organizaţia în care lucrez este orientată foarte mult către rezultate. Una dintre preocupările principale este aceea de a fi eficace în realizarea obiectivelor fixate. Oamenii sunt competitivi şi orientaţi către performanţă.",
-              "id": 3
-            },
-            {
-              "text": "Organizaţia în care lucrez îşi structurează activităţile şi exercită control asupra resurselor. Activitatea oamenilor este ghidată de proceduri formale.",
-              "id": 4
-            }
-          ]
+            "heading": "Partea A",
+            "questions": [
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 1,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc personal. Suntem ca \u00eentr-o familie. Oamenii par s\u0103 comunice bine \u015fi s\u0103 \u00eemp\u0103rt\u0103\u015feasc\u0103 multe lucruri despre ei."
+                        },
+                        {
+                            "option": "B",
+                            "id": 2,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc foarte dinamic \u015fi \u00eentreprinz\u0103tor. Oamenii sunt dispu\u015fi s\u0103 se implice \u00een probleme \u015fi s\u0103 \u00ee\u015fi asume riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 3,
+                            "text": "Organiza\u0163ia \u00een care lucrez este orientat\u0103 foarte mult c\u0103tre rezultate. Una dintre preocup\u0103rile principale este aceea de a fi eficace \u00een realizarea obiectivelor fixate. Oamenii sunt competitivi \u015fi orienta\u0163i c\u0103tre performan\u0163\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 4,
+                            "text": "Organiza\u0163ia \u00een care lucrez \u00ee\u015fi structureaz\u0103 activit\u0103\u0163ile \u015fi exercit\u0103 control asupra resurselor. Activitatea oamenilor este ghidat\u0103 de proceduri formale."
+                        }
+                    ],
+                    "id": 1,
+                    "text": "Caracteristici dominante ale organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 5,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 faciliteaz\u0103 desf\u0103\u015furarea activit\u0103\u0163ilor, liderii no\u015ftri ne ghideaz\u0103, ne \u00eendrum\u0103, ne ajut\u0103 s\u0103 ne \u00eembun\u0103t\u0103\u0163im performan\u0163ele."
+                        },
+                        {
+                            "option": "B",
+                            "id": 6,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este \u00eentreprinz\u0103toare, inovatoare, caut\u0103 solu\u0163ii noi \u015fi \u00ee\u015fi asum\u0103 riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 7,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este orientat\u0103 c\u0103tre rezultate, c\u0103tre atingerea obiectivelor, este agresiv\u0103, dar clar\u0103, ra\u0163ional\u0103, recompensele sunt bine stabilite."
+                        },
+                        {
+                            "option": "D",
+                            "id": 8,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 coordoneaz\u0103, organizeaz\u0103, eficien\u0163a este constant\u0103."
+                        }
+                    ],
+                    "id": 2,
+                    "text": "Conducerea \u00een cadrul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 9,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul \u00een echip\u0103, pe participare \u015fi consens \u00een cadrul echipelor de lucru."
+                        },
+                        {
+                            "option": "B",
+                            "id": 10,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul individual, pe inova\u0163ie, asumare de riscuri \u015fi valorizeaz\u0103 unicitatea."
+                        },
+                        {
+                            "option": "C",
+                            "id": 11,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se caracterizeaz\u0103 prin standarde \u00eenalte de performan\u0163\u0103, stimuleaz\u0103 spiritul competitiv."
+                        },
+                        {
+                            "option": "D",
+                            "id": 12,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe asigurarea siguran\u0163ei locului de munc\u0103, caracteriz\u00e2ndu-se prin conformism, predictibilitate \u015fi stabilitate \u00een rela\u0163iile dintre angaja\u0163i."
+                        }
+                    ],
+                    "id": 3,
+                    "text": "Managementul resurselor umane"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 13,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt loialitatea \u015fi \u00eencrederea reciproc\u0103. Angajamentul \u015fi ata\u015famentul fa\u0163\u0103 de organiza\u0163ie este foarte mare."
+                        },
+                        {
+                            "option": "B",
+                            "id": 14,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este focalizarea pe inova\u0163ie \u015fi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe pia\u0163\u0103."
+                        },
+                        {
+                            "option": "C",
+                            "id": 15,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este accentul pus pe performan\u0163e, realiz\u0103ri \u015fi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea \u015fi orientarea c\u0103tre profit."
+                        },
+                        {
+                            "option": "D",
+                            "id": 16,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt regulile \u015fi politicile formale. Este important\u0103 men\u0163inerea unui progres constant \u015fi sigur."
+                        }
+                    ],
+                    "id": 4,
+                    "text": "Liantul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 17,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi \u00eencrederea reciproc\u0103, deschiderea \u015fi implicarea."
+                        },
+                        {
+                            "option": "B",
+                            "id": 18,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe achizi\u0163ionarea de noi resurse \u015fi pe crearea unui mediu provocator \u015fi stimulant. Este valorizat\u0103 c\u0103utarea de noi oportunit\u0103\u0163i \u015fi \u00eencercarea de alternative noi."
+                        },
+                        {
+                            "option": "C",
+                            "id": 19,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe realiz\u0103ri \u015fi pe activit\u0103\u0163ile care stimuleaz\u0103 spiritul competitiv. Este important s\u0103 oferim o gam\u0103 larg\u0103 de produse \u015fi s\u0103 c\u00e2\u015ftig\u0103m o pia\u0163\u0103 c\u00e2t mai vast\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 20,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe stabilitate \u015fi siguran\u0163\u0103. Pentru noi sunt importante eficien\u0163a \u015fi controlul exercitat"
+                        }
+                    ],
+                    "id": 5,
+                    "text": "Valorile care stau la baza strategiei organizatorice"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 21,
+                            "text": "Succesul organiza\u0163iei noastre este definit prin prisma dezvolt\u0103rii resurselor umane, a muncii \u00een echip\u0103, a angajamentului angaja\u0163ilor fa\u0163\u0103 de organiza\u0163ie \u015fi a orient\u0103rii c\u0103tre angaja\u0163i."
+                        },
+                        {
+                            "option": "B",
+                            "id": 22,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma achizi\u0163ion\u0103rii de produse \u015fi resurse noi sau unice. Organiza\u0163ia noastr\u0103 este un lider \u00een domeniul noilor tehnologii \u015fi inova\u0163ii."
+                        },
+                        {
+                            "option": "C",
+                            "id": 23,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma cre\u015fterii profitului \u015fi a cotei de pia\u0163\u0103, dar \u015fi a dep\u0103\u015firii concuren\u0163ei. Cheia este preluarea conducerii pe pia\u0163a competitiv\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 24,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma eficien\u0163ei, folosirii optime a resurselor. \u00cen acest sens sunt critice sc\u0103derea costurilor de produc\u0163ie, planificarea constant\u0103 a activit\u0103\u0163ilor \u015fi respectarea termenelor de livrare."
+                        }
+                    ],
+                    "id": 6,
+                    "text": "Criteriile de succes"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 25,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc personal. Suntem ca \u00eentr-o familie. Oamenii par s\u0103 comunice bine \u015fi s\u0103 \u00eemp\u0103rt\u0103\u015feasc\u0103 multe lucruri."
+                        },
+                        {
+                            "option": "B",
+                            "id": 26,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc foarte dinamic \u015fi \u00eentreprinz\u0103tor. Oamenii sunt dispu\u015fi s\u0103 se implice \u00een probleme \u015fi s\u0103 \u00ee\u015fi asume riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 27,
+                            "text": "Organiza\u0163ia \u00een care lucrez este orientat\u0103 foarte mult c\u0103tre rezultate. Una dintre preocup\u0103rile principale este aceea de a fi eficace \u00een realizarea obiectivelor fixate. Oamenii sunt competitivi \u015fi orienta\u0163i c\u0103tre performan\u0163\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 28,
+                            "text": "Organiza\u0163ia \u00een care lucrez \u00ee\u015fi structureaz\u0103 activit\u0103\u0163ile \u015fi exercit\u0103 control asupra resurselor. Activitatea oamenilor este ghidat\u0103 de proceduri formale."
+                        }
+                    ],
+                    "id": 7,
+                    "text": "Caracteristici dominante ale organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 29,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 faciliteaz\u0103 desf\u0103\u015furarea activit\u0103\u0163ilor, liderii no\u015ftri ne ghideaz\u0103, ne \u00eendrum\u0103, ne ajut\u0103 s\u0103 ne \u00eembun\u0103t\u0103\u0163im performan\u0163ele."
+                        },
+                        {
+                            "option": "B",
+                            "id": 30,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este \u00eentreprinz\u0103toare, inovatoare, caut\u0103 solu\u0163ii noi \u015fi \u00ee\u015fi asum\u0103 riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 31,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este orientat\u0103 c\u0103tre rezultate, c\u0103tre atingerea obiectivelor, este agresiv\u0103, dar clar\u0103, ra\u0163ional\u0103, recompensele sunt bine stabilite."
+                        },
+                        {
+                            "option": "D",
+                            "id": 32,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 coordoneaz\u0103, organizeaz\u0103, eficien\u0163a este constant\u0103."
+                        }
+                    ],
+                    "id": 8,
+                    "text": "Conducerea \u00een cadrul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 33,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul \u00een echip\u0103, pe participare \u015fi consens \u00een cadrul echipelor de lucru."
+                        },
+                        {
+                            "option": "B",
+                            "id": 34,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul individual, pe inova\u0163ie, asumare de riscuri \u015fi valorizeaz\u0103 unicitatea."
+                        },
+                        {
+                            "option": "C",
+                            "id": 35,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se caracterizeaz\u0103 prin standarde \u00eenalte de performan\u0163\u0103, stimuleaz\u0103 spiritul competitiv."
+                        },
+                        {
+                            "option": "D",
+                            "id": 36,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe asigurarea siguran\u0163ei locului de munc\u0103, caracteriz\u00e2ndu-se prin conformism, predictibilitate \u015fi stabilitate \u00een rela\u0163iile dintre angaja\u0163i."
+                        }
+                    ],
+                    "id": 9,
+                    "text": "Managementul resurselor umane"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 37,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt loialitatea \u015fi \u00eencrederea reciproc\u0103. Angajamentul \u015fi ata\u015famentul fa\u0163\u0103 de organiza\u0163ie este foarte mare."
+                        },
+                        {
+                            "option": "B",
+                            "id": 38,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este focalizarea pe inova\u0163ie \u015fi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe pia\u0163\u0103."
+                        },
+                        {
+                            "option": "C",
+                            "id": 39,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este accentul pus pe performan\u0163e, realiz\u0103ri \u015fi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea \u015fi orientarea c\u0103tre profit."
+                        },
+                        {
+                            "option": "D",
+                            "id": 40,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt regulile \u015fi politicile formale. Este important\u0103 men\u0163inerea unui progres constant \u015fi sigur."
+                        }
+                    ],
+                    "id": 10,
+                    "text": "Liantul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 41,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi \u00eencrederea reciproc\u0103, deschiderea \u015fi implicarea."
+                        },
+                        {
+                            "option": "B",
+                            "id": 42,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe achizi\u0163ionarea de noi resurse \u015fi pe crearea unui mediu provocator \u015fi stimulant. Este valorizat\u0103 c\u0103utarea de noi oportunit\u0103\u0163i \u015fi \u00eencercarea de alternative noi."
+                        },
+                        {
+                            "option": "C",
+                            "id": 43,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe realiz\u0103ri \u015fi pe activit\u0103\u0163ile care stimuleaz\u0103 spiritul competitiv. Este important s\u0103 oferim o gam\u0103 larg\u0103 de produse \u015fi s\u0103 c\u00e2\u015ftig\u0103m o pia\u0163\u0103 c\u00e2t mai vast\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 44,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe stabilitate \u015fi siguran\u0163\u0103. Pentru noi sunt importante eficien\u0163a, controlul exercitat \u015fi"
+                        }
+                    ],
+                    "id": 11,
+                    "text": "Valorile care stau la baza strategiei organizatorice"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 45,
+                            "text": "Succesul organiza\u0163iei noastre este definit prin prisma dezvolt\u0103rii resurselor umane, a muncii \u00een echip\u0103, a angajamentul angaja\u0163ilor fa\u0163\u0103 de organiza\u0163ie \u015fi a orient\u0103rii c\u0103tre angaja\u0163i."
+                        },
+                        {
+                            "option": "B",
+                            "id": 46,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma achizi\u0163ion\u0103rii de produse \u015fi resurse noi sau unice. Organiza\u0163ia noastr\u0103 este un lider \u00een domeniul noilor tehnologii \u015fi inova\u0163ii."
+                        },
+                        {
+                            "option": "C",
+                            "id": 47,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma cre\u015fterii profitului \u015fi a cotei de pia\u0163\u0103, dar \u015fi a dep\u0103\u015firii concuren\u0163ei. Cheia este luarea conducerii pe pia\u0163a competitiv\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 48,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma eficien\u0163ei, folosirii optime a resurselor. \u00cen acest sens sunt critice sc\u0103derea costurilor de produc\u0163ie, planificarea constant\u0103 a activit\u0103\u0163ilor \u015fi respectarea termenelor de livrare."
+                        }
+                    ],
+                    "id": 12,
+                    "text": "Criteriile de succes"
+                }
+            ],
+            "id": 1,
+            "text": "Este constituit\u0103 din 6 aspecte care se refer\u0103 la dimensiuni specifice, comune tuturor organiza\u0163iilor. Fiec\u0103rui aspect \u00eei sunt alocate 4 tipuri de afirma\u0163ii posibile, pe care trebuie s\u0103 le evalua\u0163i \u00een func\u0163ie de gradul de potrivire cu organiza\u0163ia dumneavoastr\u0103. \r\nSarcina dumneavoastr\u0103 este de a repartiza la fiecare dintre cele 4 chestiuni un total de 100 de puncte, \u00een func\u0163ie de c\u00e2t de potrivite vi se par organiza\u0163iei unde lucra\u0163i."
         },
         {
-          "text": "Conducerea în cadrul organizaţiei",
-          "id": 2,
-          "choices": [
-            {
-              "text": "Conducerea în organizaţia noastră facilitează desfăşurarea activităţilor, liderii noştri ne ghidează, ne îndrumă, ne ajută să ne îmbunătăţim performanţele.",
-              "id": 5
-            },
-            {
-              "text": "Conducerea în organizaţia noastră este întreprinzătoare, inovatoare, caută soluţii noi şi îşi asumă riscuri.",
-              "id": 6
-            },
-            {
-              "text": "Conducerea în organizaţia noastră este orientată către rezultate, către atingerea obiectivelor, este agresivă, dar clară, raţională, recompensele sunt bine stabilite.",
-              "id": 7
-            },
-            {
-              "text": "Conducerea în organizaţia noastră coordonează, organizează, eficienţa este constantă.",
-              "id": 8
-            }
-          ]
-        },
-        {
-          "text": "Managementul resurselor umane",
-          "id": 3,
-          "choices": [
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul în echipă, pe participare şi consens în cadrul echipelor de lucru.",
-              "id": 9
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul individual, pe inovaţie, asumare de riscuri şi valorizează unicitatea.",
-              "id": 10
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se caracterizează prin standarde înalte de performanţă, stimulează spiritul competitiv.",
-              "id": 11
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe asigurarea siguranţei locului de muncă, caracterizându-se prin conformism, predictibilitate şi stabilitate în relaţiile dintre angajaţi.",
-              "id": 12
-            }
-          ]
-        },
-        {
-          "text": "Liantul organizaţiei",
-          "id": 4,
-          "choices": [
-            {
-              "text": "Factorii care menţin organizaţia unită sunt loialitatea şi încrederea reciprocă. Angajamentul şi ataşamentul faţă de organizaţie este foarte mare.",
-              "id": 13
-            },
-            {
-              "text": "Ceea ce menţine organizaţia unită este focalizarea pe inovaţie şi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe piaţă.",
-              "id": 14
-            },
-            {
-              "text": "Ceea ce menţine organizaţia unită este accentul pus pe performanţe, realizări şi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea şi orientarea către profit.",
-              "id": 15
-            },
-            {
-              "text": "Factorii care menţin organizaţia unită sunt regulile şi politicile formale. Este importantă menţinerea unui progres constant şi sigur.",
-              "id": 16
-            }
-          ]
-        },
-        {
-          "text": "Valorile care stau la baza strategiei organizatorice",
-          "id": 5,
-          "choices": [
-            {
-              "text": "Organizaţia noastră pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi încrederea reciprocă, deschiderea şi implicarea.",
-              "id": 17
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe achiziţionarea de noi resurse şi pe crearea unui mediu provocator şi stimulant. Este valorizată căutarea de noi oportunităţi şi încercarea de alternative noi.",
-              "id": 18
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe realizări şi pe activităţile care stimulează spiritul competitiv. Este important să oferim o gamă largă de produse şi să câştigăm o piaţă cât mai vastă.",
-              "id": 19
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe stabilitate şi siguranţă. Pentru noi sunt importante eficienţa şi controlul exercitat",
-              "id": 20
-            }
-          ]
-        },
-        {
-          "text": "Criteriile de succes",
-          "id": 6,
-          "choices": [
-            {
-              "text": "Succesul organizaţiei noastre este definit prin prisma dezvoltării resurselor umane, a muncii în echipă, a angajamentului angajaţilor faţă de organizaţie şi a orientării către angajaţi.",
-              "id": 21
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma achiziţionării de produse şi resurse noi sau unice. Organizaţia noastră este un lider în domeniul noilor tehnologii şi inovaţii.",
-              "id": 22
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma creşterii profitului şi a cotei de piaţă, dar şi a depăşirii concurenţei. Cheia este preluarea conducerii pe piaţa competitivă.",
-              "id": 23
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma eficienţei, folosirii optime a resurselor. În acest sens sunt critice scăderea costurilor de producţie, planificarea constantă a activităţilor şi respectarea termenelor de livrare.",
-              "id": 24
-            }
-          ]
+            "heading": "Partea B",
+            "questions": [
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 25,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc personal. Suntem ca \u00eentr-o familie. Oamenii par s\u0103 comunice bine \u015fi s\u0103 \u00eemp\u0103rt\u0103\u015feasc\u0103 multe lucruri."
+                        },
+                        {
+                            "option": "B",
+                            "id": 26,
+                            "text": "Organiza\u0163ia \u00een care lucrez este un loc foarte dinamic \u015fi \u00eentreprinz\u0103tor. Oamenii sunt dispu\u015fi s\u0103 se implice \u00een probleme \u015fi s\u0103 \u00ee\u015fi asume riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 27,
+                            "text": "Organiza\u0163ia \u00een care lucrez este orientat\u0103 foarte mult c\u0103tre rezultate. Una dintre preocup\u0103rile principale este aceea de a fi eficace \u00een realizarea obiectivelor fixate. Oamenii sunt competitivi \u015fi orienta\u0163i c\u0103tre performan\u0163\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 28,
+                            "text": "Organiza\u0163ia \u00een care lucrez \u00ee\u015fi structureaz\u0103 activit\u0103\u0163ile \u015fi exercit\u0103 control asupra resurselor. Activitatea oamenilor este ghidat\u0103 de proceduri formale."
+                        }
+                    ],
+                    "id": 7,
+                    "text": "Caracteristici dominante ale organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 29,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 faciliteaz\u0103 desf\u0103\u015furarea activit\u0103\u0163ilor, liderii no\u015ftri ne ghideaz\u0103, ne \u00eendrum\u0103, ne ajut\u0103 s\u0103 ne \u00eembun\u0103t\u0103\u0163im performan\u0163ele."
+                        },
+                        {
+                            "option": "B",
+                            "id": 30,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este \u00eentreprinz\u0103toare, inovatoare, caut\u0103 solu\u0163ii noi \u015fi \u00ee\u015fi asum\u0103 riscuri."
+                        },
+                        {
+                            "option": "C",
+                            "id": 31,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 este orientat\u0103 c\u0103tre rezultate, c\u0103tre atingerea obiectivelor, este agresiv\u0103, dar clar\u0103, ra\u0163ional\u0103, recompensele sunt bine stabilite."
+                        },
+                        {
+                            "option": "D",
+                            "id": 32,
+                            "text": "Conducerea \u00een organiza\u0163ia noastr\u0103 coordoneaz\u0103, organizeaz\u0103, eficien\u0163a este constant\u0103."
+                        }
+                    ],
+                    "id": 8,
+                    "text": "Conducerea \u00een cadrul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 33,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul \u00een echip\u0103, pe participare \u015fi consens \u00een cadrul echipelor de lucru."
+                        },
+                        {
+                            "option": "B",
+                            "id": 34,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe lucrul individual, pe inova\u0163ie, asumare de riscuri \u015fi valorizeaz\u0103 unicitatea."
+                        },
+                        {
+                            "option": "C",
+                            "id": 35,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se caracterizeaz\u0103 prin standarde \u00eenalte de performan\u0163\u0103, stimuleaz\u0103 spiritul competitiv."
+                        },
+                        {
+                            "option": "D",
+                            "id": 36,
+                            "text": "Stilul de management \u00een organiza\u0163ia noastr\u0103 se focalizeaz\u0103 pe asigurarea siguran\u0163ei locului de munc\u0103, caracteriz\u00e2ndu-se prin conformism, predictibilitate \u015fi stabilitate \u00een rela\u0163iile dintre angaja\u0163i."
+                        }
+                    ],
+                    "id": 9,
+                    "text": "Managementul resurselor umane"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 37,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt loialitatea \u015fi \u00eencrederea reciproc\u0103. Angajamentul \u015fi ata\u015famentul fa\u0163\u0103 de organiza\u0163ie este foarte mare."
+                        },
+                        {
+                            "option": "B",
+                            "id": 38,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este focalizarea pe inova\u0163ie \u015fi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe pia\u0163\u0103."
+                        },
+                        {
+                            "option": "C",
+                            "id": 39,
+                            "text": "Ceea ce men\u0163ine organiza\u0163ia unit\u0103 este accentul pus pe performan\u0163e, realiz\u0103ri \u015fi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea \u015fi orientarea c\u0103tre profit."
+                        },
+                        {
+                            "option": "D",
+                            "id": 40,
+                            "text": "Factorii care men\u0163in organiza\u0163ia unit\u0103 sunt regulile \u015fi politicile formale. Este important\u0103 men\u0163inerea unui progres constant \u015fi sigur."
+                        }
+                    ],
+                    "id": 10,
+                    "text": "Liantul organiza\u0163iei"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 41,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi \u00eencrederea reciproc\u0103, deschiderea \u015fi implicarea."
+                        },
+                        {
+                            "option": "B",
+                            "id": 42,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe achizi\u0163ionarea de noi resurse \u015fi pe crearea unui mediu provocator \u015fi stimulant. Este valorizat\u0103 c\u0103utarea de noi oportunit\u0103\u0163i \u015fi \u00eencercarea de alternative noi."
+                        },
+                        {
+                            "option": "C",
+                            "id": 43,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe realiz\u0103ri \u015fi pe activit\u0103\u0163ile care stimuleaz\u0103 spiritul competitiv. Este important s\u0103 oferim o gam\u0103 larg\u0103 de produse \u015fi s\u0103 c\u00e2\u015ftig\u0103m o pia\u0163\u0103 c\u00e2t mai vast\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 44,
+                            "text": "Organiza\u0163ia noastr\u0103 pune accent pe stabilitate \u015fi siguran\u0163\u0103. Pentru noi sunt importante eficien\u0163a, controlul exercitat \u015fi"
+                        }
+                    ],
+                    "id": 11,
+                    "text": "Valorile care stau la baza strategiei organizatorice"
+                },
+                {
+                    "choices": [
+                        {
+                            "option": "A",
+                            "id": 45,
+                            "text": "Succesul organiza\u0163iei noastre este definit prin prisma dezvolt\u0103rii resurselor umane, a muncii \u00een echip\u0103, a angajamentul angaja\u0163ilor fa\u0163\u0103 de organiza\u0163ie \u015fi a orient\u0103rii c\u0103tre angaja\u0163i."
+                        },
+                        {
+                            "option": "B",
+                            "id": 46,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma achizi\u0163ion\u0103rii de produse \u015fi resurse noi sau unice. Organiza\u0163ia noastr\u0103 este un lider \u00een domeniul noilor tehnologii \u015fi inova\u0163ii."
+                        },
+                        {
+                            "option": "C",
+                            "id": 47,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma cre\u015fterii profitului \u015fi a cotei de pia\u0163\u0103, dar \u015fi a dep\u0103\u015firii concuren\u0163ei. Cheia este luarea conducerii pe pia\u0163a competitiv\u0103."
+                        },
+                        {
+                            "option": "D",
+                            "id": 48,
+                            "text": "Succesul organiza\u0163iei noastre se define\u015fte prin prisma eficien\u0163ei, folosirii optime a resurselor. \u00cen acest sens sunt critice sc\u0103derea costurilor de produc\u0163ie, planificarea constant\u0103 a activit\u0103\u0163ilor \u015fi respectarea termenelor de livrare."
+                        }
+                    ],
+                    "id": 12,
+                    "text": "Criteriile de succes"
+                }
+            ],
+            "id": 2,
+            "text": "V\u0103 rug\u0103m s\u0103 v\u0103 g\u00e2ndi\u0163i la cum a\u0163i dori dumneavoastr\u0103 s\u0103 fie organiza\u0163ia \u00een care lucra\u0163i \u015fi s\u0103 completa\u0163i \u00een continuare grila. \r\nSe respect\u0103 acelea\u015fi principii ca \u015fi la Partea A a chestionarului."
         }
-      ]
-    },
-    {
-      "text": "Vă rugăm să vă gândiţi la cum aţi dori dumneavoastră să fie organizaţia în care lucraţi şi să completaţi în continuare grila. \r\nSe respectă aceleaşi principii ca şi la Partea A a chestionarului.",
-      "id": 2,
-      "heading": "Partea B",
-      "questions": [
-        {
-          "text": "Caracteristici dominante ale organizaţiei",
-          "id": 7,
-          "choices": [
-            {
-              "text": "Organizaţia în care lucrez este un loc personal. Suntem ca într-o familie. Oamenii par să comunice bine şi să împărtăşească multe lucruri.",
-              "id": 25
-            },
-            {
-              "text": "Organizaţia în care lucrez este un loc foarte dinamic şi întreprinzător. Oamenii sunt dispuşi să se implice în probleme şi să îşi asume riscuri.",
-              "id": 26
-            },
-            {
-              "text": "Organizaţia în care lucrez este orientată foarte mult către rezultate. Una dintre preocupările principale este aceea de a fi eficace în realizarea obiectivelor fixate. Oamenii sunt competitivi şi orientaţi către performanţă.",
-              "id": 27
-            },
-            {
-              "text": "Organizaţia în care lucrez îşi structurează activităţile şi exercită control asupra resurselor. Activitatea oamenilor este ghidată de proceduri formale.",
-              "id": 28
-            }
-          ]
-        },
-        {
-          "text": "Conducerea în cadrul organizaţiei",
-          "id": 8,
-          "choices": [
-            {
-              "text": "Conducerea în organizaţia noastră facilitează desfăşurarea activităţilor, liderii noştri ne ghidează, ne îndrumă, ne ajută să ne îmbunătăţim performanţele.",
-              "id": 29
-            },
-            {
-              "text": "Conducerea în organizaţia noastră este întreprinzătoare, inovatoare, caută soluţii noi şi îşi asumă riscuri.",
-              "id": 30
-            },
-            {
-              "text": "Conducerea în organizaţia noastră este orientată către rezultate, către atingerea obiectivelor, este agresivă, dar clară, raţională, recompensele sunt bine stabilite.",
-              "id": 31
-            },
-            {
-              "text": "Conducerea în organizaţia noastră coordonează, organizează, eficienţa este constantă.",
-              "id": 32
-            }
-          ]
-        },
-        {
-          "text": "Managementul resurselor umane",
-          "id": 9,
-          "choices": [
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul în echipă, pe participare şi consens în cadrul echipelor de lucru.",
-              "id": 33
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe lucrul individual, pe inovaţie, asumare de riscuri şi valorizează unicitatea.",
-              "id": 34
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se caracterizează prin standarde înalte de performanţă, stimulează spiritul competitiv.",
-              "id": 35
-            },
-            {
-              "text": "Stilul de management în organizaţia noastră se focalizează pe asigurarea siguranţei locului de muncă, caracterizându-se prin conformism, predictibilitate şi stabilitate în relaţiile dintre angajaţi.",
-              "id": 36
-            }
-          ]
-        },
-        {
-          "text": "Liantul organizaţiei",
-          "id": 10,
-          "choices": [
-            {
-              "text": "Factorii care menţin organizaţia unită sunt loialitatea şi încrederea reciprocă. Angajamentul şi ataşamentul faţă de organizaţie este foarte mare.",
-              "id": 37
-            },
-            {
-              "text": "Ceea ce menţine organizaţia unită este focalizarea pe inovaţie şi dezvoltare. Se pune un foarte mare accent pe a fi la curent cu noile tehnologii de pe piaţă.",
-              "id": 38
-            },
-            {
-              "text": "Ceea ce menţine organizaţia unită este accentul pus pe performanţe, realizări şi pe atingerea obiectivelor. Unele dintre comportamentele cele mai frecvente sunt agresivitatea şi orientarea către profit.",
-              "id": 39
-            },
-            {
-              "text": "Factorii care menţin organizaţia unită sunt regulile şi politicile formale. Este importantă menţinerea unui progres constant şi sigur.",
-              "id": 40
-            }
-          ]
-        },
-        {
-          "text": "Valorile care stau la baza strategiei organizatorice",
-          "id": 11,
-          "choices": [
-            {
-              "text": "Organizaţia noastră pune accent pe dezvoltarea resurselor umane. Sunt foarte importante pentru noi încrederea reciprocă, deschiderea şi implicarea.",
-              "id": 41
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe achiziţionarea de noi resurse şi pe crearea unui mediu provocator şi stimulant. Este valorizată căutarea de noi oportunităţi şi încercarea de alternative noi.",
-              "id": 42
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe realizări şi pe activităţile care stimulează spiritul competitiv. Este important să oferim o gamă largă de produse şi să câştigăm o piaţă cât mai vastă.",
-              "id": 43
-            },
-            {
-              "text": "Organizaţia noastră pune accent pe stabilitate şi siguranţă. Pentru noi sunt importante eficienţa, controlul exercitat şi",
-              "id": 44
-            }
-          ]
-        },
-        {
-          "text": "Criteriile de succes",
-          "id": 12,
-          "choices": [
-            {
-              "text": "Succesul organizaţiei noastre este definit prin prisma dezvoltării resurselor umane, a muncii în echipă, a angajamentul angajaţilor faţă de organizaţie şi a orientării către angajaţi.",
-              "id": 45
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma achiziţionării de produse şi resurse noi sau unice. Organizaţia noastră este un lider în domeniul noilor tehnologii şi inovaţii.",
-              "id": 46
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma creşterii profitului şi a cotei de piaţă, dar şi a depăşirii concurenţei. Cheia este luarea conducerii pe piaţa competitivă.",
-              "id": 47
-            },
-            {
-              "text": "Succesul organizaţiei noastre se defineşte prin prisma eficienţei, folosirii optime a resurselor. În acest sens sunt critice scăderea costurilor de producţie, planificarea constantă a activităţilor şi respectarea termenelor de livrare.",
-              "id": 48
-            }
-          ]
-        }
-      ]
-    }
-  ]
+    ]
 }
