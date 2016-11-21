@@ -1,6 +1,12 @@
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET, require_POST
+from django.shortcuts import render
 from poll import models
+
+@require_GET
+def index(request):
+    context = {}
+    return render(request, 'poll/index.html', context)
 
 @require_GET
 def questions(request):

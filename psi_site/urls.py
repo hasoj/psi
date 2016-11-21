@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^questions$', views.questions, name='questions'),
     url(r'^submit$', views.submit, name='submit'),
     url(r'^statistics$', views.statistics, name='statistics'),
-
+    url(r'^$', views.index, name='index'),
 ]
