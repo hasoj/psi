@@ -24,6 +24,7 @@ class Question(models.Model):
 class Choice(models.Model):
     text = models.TextField()
     question = models.ForeignKey(Question)
+    option = models.CharField(max_length=2, default='X')
     date_added = models.DateTimeField(auto_now=True)
     date_modified = models.DateTimeField(auto_now_add=True)
 
