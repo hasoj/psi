@@ -1,0 +1,60 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	width: 1000px;
+	margin: auto;
+}
+
+#header{
+	position: relative;
+	margin-bottom: 30px;
+	margin-top: 20px;
+	text-align: center;
+}
+
+#questionnaire{
+	position: relative;
+}
+
+.group{
+	margin-bottom: 10px;
+}
+
+.group h3{
+	margin-top: 10px;
+	margin-left: 20px;
+	font-family: 'Exo', sans-serif;
+	text-align: center;
+	color: red;
+}
+
+.question{
+	margin-top: 10px;
+	margin-left: 10px;
+	border: 1px solid black;
+	padding: 5px 0 5px 5px;
+	vertical-align: middle;
+}
+.question_description{
+	border: 1px solid red;
+	margin-bottom: 5px;
+	font-family: 'Exo', sans-serif;
+	padding-left: 5px;
+}
+
+.choices{
+	border: 1px solid black;
+}
+
+.choice{
+	margin-bottom: 10px;
+	margin-left: 5px;
+	list-style: none;	
+}
+
+.modified_choice{
+	color: green;
+}
