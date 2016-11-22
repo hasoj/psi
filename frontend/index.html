@@ -2,6 +2,10 @@
 <html ng-app="PsiApp">
 <head>
     <title>PSI Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.js"></script>
+<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment-with-locales.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/locale/ro.js"></script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
@@ -11,10 +15,29 @@
     <link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet">
 </head>
 <body ng-controller='PsiController'>
+
 <div id="header">
-    <h1>Project title</h1>
+    <h1>
+        Psi
+    </h1>
 </div>
-<form ng-submit="sendQuestionnaire()">
+
+<div ng-show="errorReason" id="error">
+    <h1 style="color:red">
+        Eroare: {{ errorReason }}
+    </h1>
+</div>
+
+<div ng-show="!showTest">
+    <form ng-submit="startTest()">
+        <button>Pornește testul!</button>
+    </form>
+</div>
+
+<form ng-show="showTest" ng-submit="sendQuestionnaire()">
+    <h1>
+        Testul de personalitate
+    </h1>
     <div id="questionnaire">
         <div class="group" ng-repeat="group in questionData.groups">
             <h3>
@@ -42,15 +65,31 @@
                     </li>
                 </ul>
             </div>
-
         </div>
-
     </div>
-    <br>
-    <button style="margin-left: 20px; font-size: 30px;">Evaluate your responses!</button>
-    <br>
-    <br>
-    <br>
+    <button>Trimite!</button>
 </form>
+
+<div ng-show="ownResults.length > 0">
+    <h1>
+        Rezultate personale
+    </h1>
+    <div ng-repeat="result in ownResults">
+        <span>{{ result.date }}</span>
+        <span>{{ result.scores }}</span>
+    </div>
+</div>
+
+<div ng-show="recentResults.length > 0">
+    <h1>
+        Rezultate recente
+    </h1>
+    <div ng-repeat="result in recentResults">
+        <span>{{ result.date }}</span>
+        <span>{{ result.scores }}</span>
+    </div>
+</div>
+
+
 </body>
 </html>

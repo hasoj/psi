@@ -1,6 +1,10 @@
 'use strict';
 var app = angular.module('PsiApp', []);
 
+function formatDate(isoString) {
+    return moment(isoString).format("LLLL");
+}
+
 app.controller(
     'PsiController',
     [
@@ -12,24 +16,24 @@ app.controller(
             $scope.backend = "http://localhost:8000";
             $scope.questionsEndpoint = $scope.backend + "/questions";
             $scope.submitEndpoint = $scope.backend + "/submit";
+            $scope.stateEndpoint = $scope.backend + "/state";
 
-            $scope.questionData = {
-                success: false,
-                reason: "loading"
-            };
+            $scope.showLoading = true;
+            $scope.showTest = false;
+
+            $scope.ownResults = [];
+            $scope.recentResults = [];
+
+            $scope.errorReason = "";
+
+            $scope.questionData = {};
+
             $scope.responses = [];
-
             for (var i = 1; i <= 48; i++) {
                 $scope.responses[i] = [25, 0];
             }
 
-            $http.get($scope.questionsEndpoint)
-                .success(function (data) {
-                    $scope.questionData = data;
-                });
-
             function determinePrev(id, questionID) {
-
                 var prev;
                 if (id === questionID * 4 + 1)
                     prev = questionID * 4 + 4;
@@ -50,12 +54,10 @@ app.controller(
                 else
                     prev = id - 1;
 
-
                 return prev;
             }
 
             function determineNext(id, questionID) {
-
                 var next;
                 if (id === questionID * 4 + 4)
                     next = questionID * 4 + 1;
@@ -104,6 +106,7 @@ app.controller(
             };
 
             $scope.sendQuestionnaire = function () {
+                $scope.showLoading = true;
                 var submitData = [];
                 for (var i = 1; i <= 48; i++) {
                     submitData.push({
@@ -117,8 +120,53 @@ app.controller(
                     {
                         responses: submitData
                     }
-                );
-            }
+                ).success(function(data) {
+                    $scope.showTest = false;
+                    $scope.pullStatus();
+                    $scope.showLoading = false;
+                }).error(function(msg){
+                    $scope.errorReason = msg;
+                    $scope.showLoading = false;
+                });
+            };
+
+            $scope.pullStatus = function() {
+                $scope.showLoading = true;
+                $http.get($scope.stateEndpoint)
+                .success(function(data) {
+                    if(data.status != "ok") {
+                        $scope.errorReason = data.reason;
+                        return;
+                    }
+                    $scope.recentResults = data.otherRecentTests;
+                    $scope.ownResults = data.ownTestResults;
+
+                    if(data.hasUnfinishedTest) {
+                        $scope.showTest = true;
+                    }
+                    $scope.showLoading = false;
+                }).error(function(msg){
+                    $scope.errorReason = msg;
+                    $scope.showLoading = false;
+                });
+            };
+
+            $scope.startTest = function() {
+                $scope.showLoading = true;
+                $http.get($scope.questionsEndpoint)
+                .success(function (data) {
+                    $scope.questionData = data;
+                    $scope.showLoading = false;
+                    $scope.showTest = true;
+                }).error(function(msg){
+                    $scope.errorReason = msg;
+                    $scope.showLoading = false;
+                });
+            };
+
+            $scope.pullStatus();
+            $interval($scope.pullStatus, 32123); // 32s
+
         }
     ]
 );

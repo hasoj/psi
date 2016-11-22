@@ -60,13 +60,13 @@ def state(request):
         response["hasFinishedTests"] = True
         response["ownTestResults"] = [
             s.as_json_with_scores()
-            for s in closed_sessions
+            for s in closed_sessions[:5]
         ]
     response["otherRecentTests"] = [
         s.as_json_with_scores()
         for s in models.Session.objects
             .filter(date_submitted__isnull=False).exclude(ip=ip)
-            .order_by("-date_submitted")[:10]
+            .order_by("-date_submitted")[:5]
     ]
     return JsonResponse(response)
 
