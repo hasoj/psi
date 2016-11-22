@@ -38,6 +38,29 @@ class Session(models.Model):
     date_added = models.DateTimeField(auto_now=True)
     date_submitted = models.DateTimeField(null=True)
 
+    def as_json_with_scores(self):
+        return {
+            "name": self.name,
+            "date": self.date_submitted.isoformat(),
+            "scores": self.calculate_scores(),
+        }
+
+    def calculate_scores(self):
+        options = ["A", "B", "C", "D"]
+        num_ans = {o: 0 for o in options}
+        sum_ans = {o: 0.0 for o in options}
+
+        for answer in self.response_set.all():
+            option = answer.choice.option
+            num_ans[option] += 1
+            sum_ans[option] += answer.value
+
+        for o in options:
+            if num_ans[o] == 0:
+                num_ans[o] = 1
+
+        return {o: sum_ans[o] / num_ans[o] for o in options}
+
 
 class Response(models.Model):
     choice = models.ForeignKey(Choice)

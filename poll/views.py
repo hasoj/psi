@@ -43,41 +43,32 @@ def finish_session(request, responses):
         response.save()
     return session
 
-def calculate_scores(session):
-    options = ["A", "B", "C", "D"]
-    num_ans = {o: 0 for o in options}
-    sum_ans = {o: 0.0 for o in options}
-
-    for answer in session.response_set.all():
-        option = answer.choice.option
-        num_ans[option] += 1
-        sum_ans[option] += answer.value
-
-    for o in options:
-        if num_ans[o] == 0:
-            num_ans[o] = 1
-
-    return {o: sum_ans[o] / num_ans[o] for o in options}
-
 @require_GET
-def session_state(request):
+def state(request):
+    ip = get_ip(request)
     closed_sessions = get_closed_sessions(request)
-    if not closed_sessions:
-        return JsonResponse({
-            "status": "ok",
-            "hasCompletedTest": False,
-        })
-    return JsonResponse({
+    response = {
         "status": "ok",
-        "hasCompletedTest": True,
-        "scores": [
-            {
-                "scores": calculate_scores(s),
-                "date": s.date_submitted.isoformat(),
-            }
+    }
+
+    num_open_sessions = models.Session.objects.filter(ip=ip, date_submitted__isnull=True).count()
+    response['hasUnfinishedTest'] = bool(num_open_sessions)
+
+    if not closed_sessions:
+        response["hasFinishedTests"] = False
+    else:
+        response["hasFinishedTests"] = True
+        response["ownTestResults"] = [
+            s.as_json_with_scores()
             for s in closed_sessions
-        ],
-    })
+        ]
+    response["otherRecentTests"] = [
+        s.as_json_with_scores()
+        for s in models.Session.objects
+            .filter(date_submitted__isnull=False).exclude(ip=ip)
+            .order_by("-date_submitted")[:10]
+    ]
+    return JsonResponse(response)
 
 @require_GET
 def questions(request):
@@ -120,13 +111,10 @@ def questions(request):
 def submit(request):
     data = json.loads(request.body.decode("utf-8"))
     responses = data['responses']
-
     session = finish_session(request, responses)
-    scores = calculate_scores(session)
-    return JsonResponse({
-        "status": "ok",
-        "scores": scores,
-    })
+    response = session.as_json_with_scores()
+    response["status"] = "ok"
+    return JsonResponse(response)
 
 @require_GET
 def statistics(request):

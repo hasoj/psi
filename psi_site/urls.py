@@ -22,5 +22,5 @@ urlpatterns = [
     url(r'^questions$', views.questions, name='questions'),
     url(r'^submit$', views.submit, name='submit'),
     url(r'^statistics$', views.statistics, name='statistics'),
-    url(r'^session_state$', views.session_state, name='session_state'),
+    url(r'^state', views.state, name='session_state'),
 ]
