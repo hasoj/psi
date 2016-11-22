@@ -1,3 +1,4 @@
+/psi_site/local.py
 *.swp
 /static
 /db.sqlite3
