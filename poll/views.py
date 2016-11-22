@@ -12,7 +12,7 @@ def get_ip(request):
         ip = request.META.get('REMOTE_ADDR')
     return ip
 
-def get_session(request):
+def get_open_session(request):
     ip = get_ip(request)
     unclosed_sessions = models.Session.objects.filter(ip=ip, date_submitted__isnull=True)
     if unclosed_sessions:
@@ -21,8 +21,15 @@ def get_session(request):
         session = models.Session(ip=ip, date_added=timezone.now())
     return session
 
+def get_closed_sessions(request):
+    ip = get_ip(request)
+    closed_sessions = models.Session.objects\
+        .filter(ip=ip, date_submitted__isnull=False)\
+        .order_by('-date_submitted')
+    return closed_sessions.all()
+
 def finish_session(request, responses):
-    session = get_session(request)
+    session = get_open_session(request)
     session.date_submitted = timezone.now()
     session.save()
     for ans in responses:
@@ -53,6 +60,26 @@ def calculate_scores(session):
     return {o: sum_ans[o] / num_ans[o] for o in options}
 
 @require_GET
+def session_state(request):
+    closed_sessions = get_closed_sessions(request)
+    if not closed_sessions:
+        return JsonResponse({
+            "status": "ok",
+            "hasCompletedTest": False,
+        })
+    return JsonResponse({
+        "status": "ok",
+        "hasCompletedTest": True,
+        "scores": [
+            {
+                "scores": calculate_scores(s),
+                "date": s.date_submitted.isoformat(),
+            }
+            for s in closed_sessions
+        ],
+    })
+
+@require_GET
 def questions(request):
     def _get_choices(question):
         return [
@@ -81,10 +108,13 @@ def questions(request):
         }
         for g in models.QuestionGroup.objects.all()
     ]
-
-    get_session(request)
-
-    return JsonResponse({"status": "ok", "groups": groups})
+    get_open_session(request)
+    return JsonResponse(
+        {
+            "status": "ok",
+            "groups": groups,
+        }
+    )
 
 @require_POST
 def submit(request):
@@ -93,7 +123,6 @@ def submit(request):
 
     session = finish_session(request, responses)
     scores = calculate_scores(session)
-    print(scores)
     return JsonResponse({
         "status": "ok",
         "scores": scores,
