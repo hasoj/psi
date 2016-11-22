@@ -9,7 +9,8 @@ def questions(request):
         return [
             {
                 "id": c.id,
-                "text": c.text
+                "text": c.text,
+                "option": c.option,
             }
             for c in question.choice_set.all()
         ]

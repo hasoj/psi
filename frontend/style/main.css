@@ -58,3 +58,7 @@ body{
 .modified_choice{
 	color: green;
 }
+
+.option-letter {
+	font-weight: bold;
+}
