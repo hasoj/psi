@@ -9,9 +9,9 @@ app.controller(
         '$timeout',
         '$interval',
         function ($scope, $http, $timeout, $interval) {
-
-            $scope.questionsEndpoint = "questions";
-            $scope.submitEndpoint = "submit";
+            $scope.backend = "http://localhost:8000";
+            $scope.questionsEndpoint = $scope.backend + "/questions";
+            $scope.submitEndpoint = $scope.backend + "/submit";
 
             $scope.questionjson = {};
             $scope.parta = 0;
@@ -116,7 +116,7 @@ app.controller(
                 for (var i = 1; i <= 48; i++) {
                     delete $scope.responses[i][1];
                 }
-                $http.post($scope.endpoint, {"responses": $scope.responses});
+                $http.post($scope.submitEndpoint, {"responses": $scope.responses});
             }
         }
     ]
