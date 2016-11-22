@@ -13,29 +13,20 @@ app.controller(
             $scope.questionsEndpoint = $scope.backend + "/questions";
             $scope.submitEndpoint = $scope.backend + "/submit";
 
-            $scope.questionjson = {};
-            $scope.parta = 0;
-            $scope.partb = 0;
-            $scope.partaQuestions = 0;
-            $scope.partbQuestions = 0;
-            $scope.responses = {};
-
-
-            $http.get($scope.questionsEndpoint)
-                .success(function (data) {
-                    console.log(data);
-                    $scope.questionjson = data;
-                    $scope.groups = $scope.questionjson['groups'];
-                    $scope.parta = $scope.groups[0];
-                    $scope.partb = $scope.groups[1];
-                    $scope.partaQuestions = $scope.parta['questions'];
-                    $scope.partbQuestions = $scope.partb['questions'];
-                });
+            $scope.questionData = {
+                success: false,
+                reason: "loading"
+            };
+            $scope.responses = [];
 
             for (var i = 1; i <= 48; i++) {
                 $scope.responses[i] = [25, 0];
             }
 
+            $http.get($scope.questionsEndpoint)
+                .success(function (data) {
+                    $scope.questionData = data;
+                });
 
             function determinePrev(id, questionID) {
 
@@ -113,10 +104,20 @@ app.controller(
             };
 
             $scope.sendQuestionnaire = function () {
+                var submitData = [];
                 for (var i = 1; i <= 48; i++) {
-                    delete $scope.responses[i][1];
+                    submitData.push({
+                        value: $scope.responses[i][0],
+                        id: i
+                    });
                 }
-                $http.post($scope.submitEndpoint, {"responses": $scope.responses});
+
+                $http.post(
+                    $scope.submitEndpoint,
+                    {
+                        responses: submitData
+                    }
+                );
             }
         }
     ]

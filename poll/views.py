@@ -1,6 +1,6 @@
+import json
 from django.http import JsonResponse
 from django.views.decorators.http import require_GET, require_POST
-from django.shortcuts import render
 from poll import models
 
 @require_GET
@@ -36,6 +36,8 @@ def questions(request):
 
 @require_POST
 def submit(request):
+    data = json.loads(request.body.decode("utf-8"))
+    print(data)
     return JsonResponse({
         "status": "error",
         "reason": "not implemented",

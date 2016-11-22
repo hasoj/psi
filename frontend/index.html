@@ -16,7 +16,7 @@
 </div>
 <form ng-submit="sendQuestionnaire()">
     <div id="questionnaire">
-        <div class="group" ng-repeat="group in groups">
+        <div class="group" ng-repeat="group in questionData.groups">
             <h3>
                 {{ group.heading }}
             </h3>
@@ -27,15 +27,15 @@
                 </h4>
 
                 <ul class="choices">
-                    <li class="choice" ng-repeat="choice in question['choices']">
+                    <li class="choice" ng-repeat="choice in question.choices">
                         <span class="option-letter">
                             {{ choice.option + '. ' }}
                         </span>
                         {{ choice.text }}
                         <br>
                         <input style="display: inline-block; margin-left: 20px;" type="range"
-                               ng-model="responses[choice['id']][0]"
-                               ng-change="makeAdjustments(choice['id'])">
+                               ng-model="responses[choice.id][0]"
+                               ng-change="makeAdjustments(choice.id)">
                         <p style="display: inline-block; margin-left: 5px; font-size: 30px;">
                             {{ responses[choice.id][0]}}
                         </p>
