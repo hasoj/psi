@@ -3,9 +3,7 @@
 <head>
     <title>PSI Project</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.js"></script>
-<!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment-with-locales.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/locale/ro.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.2/require.min.js"></script>
@@ -22,74 +20,81 @@
     </h1>
 </div>
 
-<div ng-show="errorReason" id="error">
-    <h1 style="color:red">
-        Eroare: {{ errorReason }}
-    </h1>
-</div>
+<div class="ng-cloak" ng-show="!showLoading">
 
-<div ng-show="!showTest">
-    <form ng-submit="startTest()">
-        <button>Pornește testul!</button>
-    </form>
-</div>
+    <div ng-show="errorReason" id="error">
+        <h1 style="color:red">
+            Eroare: {{ errorReason }}
+        </h1>
+    </div>
 
-<form ng-show="showTest" ng-submit="sendQuestionnaire()">
-    <h1>
-        Testul de personalitate
-    </h1>
-    <div id="questionnaire">
-        <div class="group" ng-repeat="group in questionData.groups">
-            <h3>
-                {{ group.heading }}
-            </h3>
+    <div ng-show="!showTest">
+        <form ng-submit="startTest()">
+            <button>Pornește testul!</button>
+        </form>
+    </div>
 
-            <div class="question" ng-repeat="question in group.questions">
-                <h4 class="question_description">
-                    {{ question.text }}
-                </h4>
+    <form ng-show="showTest" ng-submit="sendQuestionnaire()">
+        <h1>
+            Testul de personalitate
+        </h1>
+        <div id="questionnaire">
+            <div class="group" ng-repeat="group in questionData.groups">
+                <h3>
+                    {{ group.heading }}
+                </h3>
 
-                <ul class="choices">
-                    <li class="choice" ng-repeat="choice in question.choices">
+                <div class="question" ng-repeat="question in group.questions">
+                    <h4 class="question_description">
+                        {{ question.text }}
+                    </h4>
+
+                    <ul class="choices">
+                        <li class="choice" ng-repeat="choice in question.choices">
                         <span class="option-letter">
                             {{ choice.option + '. ' }}
                         </span>
-                        {{ choice.text }}
-                        <br>
-                        <input style="display: inline-block; margin-left: 20px;" type="range"
-                               ng-model="responses[choice.id][0]"
-                               ng-change="makeAdjustments(choice.id)">
-                        <p style="display: inline-block; margin-left: 5px; font-size: 30px;">
-                            {{ responses[choice.id][0]}}
-                        </p>
-                    </li>
-                </ul>
+                            {{ choice.text }}
+                            <br>
+                            <input style="display: inline-block; margin-left: 20px;" type="range"
+                                   ng-model="responses[choice.id][0]"
+                                   ng-change="makeAdjustments(choice.id)">
+                            <p style="display: inline-block; margin-left: 5px; font-size: 30px;">
+                                {{ responses[choice.id][0]}}
+                            </p>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <button>Trimite!</button>
-</form>
+        <button>Trimite!</button>
+    </form>
 
-<div ng-show="ownResults.length > 0">
-    <h1>
-        Rezultate personale
-    </h1>
-    <div ng-repeat="result in ownResults">
-        <span>{{ result.date }}</span>
-        <span>{{ result.scores }}</span>
+    <div ng-show="ownResults.length > 0">
+        <h1>
+            Rezultate personale
+        </h1>
+        <div ng-repeat="result in ownResults">
+            <span>{{ result.date }}</span>
+            <span>{{ result.scores }}</span>
+        </div>
     </div>
+
+    <div ng-show="recentResults.length > 0">
+        <h1>
+            Rezultate recente
+        </h1>
+        <div ng-repeat="result in recentResults">
+            <span>{{ result.date }}</span>
+            <span>{{ result.scores }}</span>
+        </div>
+    </div>
+
 </div>
 
-<div ng-show="recentResults.length > 0">
-    <h1>
-        Rezultate recente
-    </h1>
-    <div ng-repeat="result in recentResults">
-        <span>{{ result.date }}</span>
-        <span>{{ result.scores }}</span>
-    </div>
+<div ng-show="showLoading">
+    <h1> Vă rugăm să așteptați... </h1>
 </div>
-
 
 </body>
 </html>
