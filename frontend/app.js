@@ -5,6 +5,10 @@ function formatDate(isoString) {
     return moment(isoString).format("LLLL");
 }
 
+function errorString(data) {
+    return '"' + data.config.method + " " + data.config.url + '" nu a funcționat.';
+}
+
 app.controller(
     'PsiController',
     [
@@ -27,6 +31,7 @@ app.controller(
             $scope.errorReason = "";
 
             $scope.questionData = {};
+            $scope.statusPulled = false;
 
             $scope.responses = [];
             for (var i = 1; i <= 48; i++) {
@@ -117,36 +122,30 @@ app.controller(
 
                 $http.post(
                     $scope.submitEndpoint,
-                    {
-                        responses: submitData
-                    }
-                ).success(function(data) {
+                    { responses: submitData }
+                ).then(function(data) {
                     $scope.showTest = false;
                     $scope.pullStatus();
                     $scope.showLoading = false;
-                }).error(function(msg){
-                    $scope.errorReason = msg;
+                }, function(msg){
+                    $scope.errorReason = errorString(msg);
                     $scope.showLoading = false;
                 });
             };
 
             $scope.pullStatus = function() {
-                $scope.showLoading = true;
                 $http.get($scope.stateEndpoint)
-                .success(function(data) {
-                    if(data.status != "ok") {
-                        $scope.errorReason = data.reason;
-                        return;
-                    }
-                    $scope.recentResults = data.otherRecentTests;
-                    $scope.ownResults = data.ownTestResults;
+                .then(function(data) {
+                    $scope.recentResults = data.data.otherRecentTests;
+                    $scope.ownResults = data.data.ownTestResults;
 
                     if(data.hasUnfinishedTest) {
                         $scope.showTest = true;
                     }
                     $scope.showLoading = false;
-                }).error(function(msg){
-                    $scope.errorReason = msg;
+                    $scope.statusPulled = true;
+                }, function(msg){
+                    $scope.errorReason = errorString(msg);
                     $scope.showLoading = false;
                 });
             };
@@ -154,12 +153,12 @@ app.controller(
             $scope.startTest = function() {
                 $scope.showLoading = true;
                 $http.get($scope.questionsEndpoint)
-                .success(function (data) {
-                    $scope.questionData = data;
-                    $scope.showLoading = false;
+                .then(function (data) {
+                    $scope.questionData = data.data;
                     $scope.showTest = true;
-                }).error(function(msg){
-                    $scope.errorReason = msg;
+                    $scope.showLoading = false;
+                }, function(msg){
+                    $scope.errorReason = errorString(msg);
                     $scope.showLoading = false;
                 });
             };

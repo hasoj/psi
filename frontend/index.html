@@ -24,11 +24,11 @@
 
     <div ng-show="errorReason" id="error">
         <h1 style="color:red">
-            Eroare: {{ errorReason }}
+            <pre>{{ errorReason }}</pre>
         </h1>
     </div>
 
-    <div ng-show="!showTest">
+    <div ng-show="!showTest && statusPulled">
         <form ng-submit="startTest()">
             <button>Pornește testul!</button>
         </form>
