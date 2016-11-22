@@ -4,11 +4,6 @@ from django.shortcuts import render
 from poll import models
 
 @require_GET
-def index(request):
-    context = {}
-    return render(request, 'poll/index.html', context)
-
-@require_GET
 def questions(request):
     def _get_choices(question):
         return [

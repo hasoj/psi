@@ -1,6 +1,3 @@
-/psi_site/local.py
-psi_site/local.py
-*.swp
 /static
 /db.sqlite3
 # Byte-compiled / optimized / DLL files
@@ -92,4 +89,5 @@ ENV/
 
 # Rope project settings
 .ropeproject
-.swp
+local.py
+*.swp
