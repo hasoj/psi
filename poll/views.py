@@ -131,6 +131,7 @@ def submit(request):
 @require_GET
 def statistics(request):
     return JsonResponse({
-        "status": "error",
-        "reason": "not implemented",
+        "status": "ok",
+        "numberOfTestsTaken": models.Session.objects.filter(date_submitted__isnull=False).count(),
+        "numberOfUnfinishedTests": models.Session.objects.filter(date_submitted__isnull=True).count(),
     })
