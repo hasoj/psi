@@ -34,8 +34,9 @@ app.controller(
             $scope.statusPulled = false;
 
             $scope.responses = [];
+
             for (var i = 1; i <= 48; i++) {
-                $scope.responses[i] = [25, 0];
+                $scope.responses[i] = [25];
             }
 
             function determinePrev(id, questionID) {
@@ -86,29 +87,52 @@ app.controller(
                 return next;
             }
 
-            $scope.makeAdjustments = function (id) {
-                var questionID = Math.floor((id - 1) / 4);
-                console.log(questionID);
-                var sumOverChoices = 0;
+	    var timer = null;
+            $scope.makeAdjustments = function (id, delay) {
+		if(timer){
+			$timeout.cancel(timer);
+			timer = null;
+		}
+		timer = $timeout(
+			function(){				
+				var questionID = Math.floor((id - 1) / 4);
+				var sumOverChoices = 0;
+					var next, prev;
 
-                $scope.responses[id][1] = "1";
-                var next = determineNext(id, questionID);
-                var prev = determinePrev(id, questionID);
+					for (i = 1; i <= 4; i++) {
+							sumOverChoices = sumOverChoices + parseInt($scope.responses[questionID * 4 + i][0]);
+					}
 
-                for (i = 1; i <= 4; i++) {
-                    if ($scope.responses[questionID * 4 + i][0] !== "0") {
-                        $scope.responses[questionID * 4 + i][1] = "1";
-                    }
-                    if ($scope.responses[questionID * 4 + i][1] === "1" && questionID * 4 + i !== next)
-                        sumOverChoices = sumOverChoices + parseInt($scope.responses[questionID * 4 + i][0]);
-                }
-                if (sumOverChoices > 100) {
-                    $scope.responses[prev][0] = parseInt($scope.responses[prev][0]) - (sumOverChoices - 100);
-                }
-                else {
-                    $scope.responses[next][0] = 100 - sumOverChoices;
-                }
-            };
+					while(sumOverChoices > 100){
+						next = determineNext(id, questionID);	
+						if(parseInt($scope.responses[next][0]) >= (sumOverChoices - 100)){
+							$scope.responses[next][0] = parseInt($scope.responses[next][0]) - (sumOverChoices - 100);
+							sumOverChoices = 100;
+						}
+						else {
+							sumOverChoices = sumOverChoices - parseInt($scope.responses[next][0]);
+							$scope.responses[next][0] = 0;
+							id = next;
+						}
+					}
+					while(sumOverChoices < 100){
+						prev = determinePrev(id, questionID);	
+						if(parseInt(100 - parseInt($scope.responses[prev][0])) >= (100 - sumOverChoices)){
+							$scope.responses[prev][0] = parseInt($scope.responses[prev][0]) + (100 - sumOverChoices);
+							sumOverChoices = 100;
+						}
+						else {
+							sumOverChoices = sumOverChoices + (100 - parseInt($scope.responses[prev][0]));
+							$scope.responses[prev][0] = 100;
+							id = next;
+						}
+
+					}
+
+				}, 
+				delay
+			);
+		};
 
             $scope.sendQuestionnaire = function () {
                 $scope.showLoading = true;
